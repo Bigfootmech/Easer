@@ -1,0 +1,220 @@
+[gd_scene load_steps=17 format=2]
+
+[ext_resource path="res://Draw Scenes/Self.png" type="Texture" id=1]
+[ext_resource path="res://Draw Scene Parts/Self/Clock.png" type="Texture" id=2]
+[ext_resource path="res://Self.gd" type="Script" id=3]
+[ext_resource path="res://Draw Scene Parts/Self/Background.png" type="Texture" id=4]
+[ext_resource path="res://Draw Scene Parts/Self/Door_Open.png" type="Texture" id=5]
+[ext_resource path="res://Draw Scene Parts/Self/Window.png" type="Texture" id=6]
+[ext_resource path="res://Draw Scene Parts/Self/Food_Eaten.png" type="Texture" id=7]
+[ext_resource path="res://Draw Scene Parts/Self/Cabinet_BG_F.png" type="Texture" id=8]
+[ext_resource path="res://Draw Scene Parts/Self/Pot_Top_Boiling.png" type="Texture" id=9]
+[ext_resource path="res://Draw Scene Parts/Self/Shrine_Static.png" type="Texture" id=10]
+[ext_resource path="res://Draw Scene Parts/Self/Kettle_Static.png" type="Texture" id=11]
+[ext_resource path="res://Draw Scene Parts/Self/Shrine_Incense.png" type="Texture" id=12]
+[ext_resource path="res://Draw Scene Parts/Self/Kettle_Steam.png" type="Texture" id=13]
+[ext_resource path="res://Draw Scene Parts/Self/Pot_Standard.png" type="Texture" id=14]
+[ext_resource path="res://Draw Overlay Parts/Sketch_cup_better.png" type="Texture" id=15]
+[ext_resource path="res://Draw Overlay Parts/SelfHelp.png" type="Texture" id=16]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 3 )
+
+[node name="BG" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 4 )
+expand = true
+
+[node name="ReferenceLocations" type="TextureRect" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 1 )
+expand = true
+
+[node name="ClockButton" type="TextureButton" parent="."]
+anchor_left = 0.286
+anchor_top = 0.127
+anchor_right = 0.321
+anchor_bottom = 0.193
+margin_left = 0.135986
+margin_top = -0.200005
+margin_right = 0.29599
+margin_bottom = 0.199997
+texture_normal = ExtResource( 2 )
+expand = true
+
+[node name="WindowButton" type="TextureButton" parent="."]
+anchor_left = 0.488
+anchor_top = 0.083
+anchor_right = 0.654
+anchor_bottom = 0.308
+margin_left = 0.287964
+margin_top = 0.199997
+margin_right = 0.303955
+margin_bottom = 0.199982
+texture_normal = ExtResource( 6 )
+expand = true
+
+[node name="FoodEaten" type="TextureRect" parent="."]
+visible = false
+anchor_left = 0.468
+anchor_top = 0.338
+anchor_right = 0.492
+anchor_bottom = 0.383
+margin_left = -0.232025
+margin_top = 0.199982
+margin_right = 0.191986
+margin_bottom = 0.199997
+texture = ExtResource( 7 )
+expand = true
+
+[node name="DoorOpen" type="TextureButton" parent="."]
+anchor_left = 0.802
+anchor_top = 0.233
+anchor_right = 0.881
+anchor_bottom = 0.633
+margin_left = -0.248047
+margin_top = 0.199997
+margin_right = -0.144043
+margin_bottom = 0.200012
+texture_normal = ExtResource( 5 )
+expand = true
+
+[node name="Cabinet" type="TextureRect" parent="."]
+anchor_left = 0.833
+anchor_top = 0.568
+anchor_right = 0.967
+anchor_bottom = 0.878
+margin_left = 0.00793457
+margin_top = 0.199982
+margin_right = -0.208069
+margin_bottom = 0.200012
+mouse_filter = 2
+texture = ExtResource( 8 )
+expand = true
+
+[node name="Shrine_Static" type="TextureButton" parent="."]
+anchor_left = 0.892
+anchor_top = 0.527
+anchor_right = 0.947
+anchor_bottom = 0.695
+margin_left = -0.40802
+margin_top = -0.200012
+margin_right = 0.271973
+margin_bottom = -3.05176e-05
+texture_normal = ExtResource( 10 )
+expand = true
+
+[node name="Shrine_Incense" type="TextureRect" parent="."]
+visible = false
+anchor_left = 0.892
+anchor_top = 0.527
+anchor_right = 0.947
+anchor_bottom = 0.695
+margin_left = -0.40802
+margin_top = -0.200012
+margin_right = 0.271973
+margin_bottom = -3.05176e-05
+mouse_filter = 2
+texture = ExtResource( 12 )
+expand = true
+
+[node name="Kettle" type="TextureButton" parent="."]
+anchor_left = 0.056
+anchor_top = 0.565
+anchor_right = 0.105
+anchor_bottom = 0.642
+margin_left = -0.344002
+margin_right = 0.479996
+margin_bottom = -0.200012
+texture_normal = ExtResource( 11 )
+expand = true
+
+[node name="KettleSteam" type="TextureRect" parent="."]
+anchor_left = 0.056
+anchor_top = 0.565
+anchor_right = 0.078
+anchor_bottom = 0.595
+margin_left = -0.344002
+margin_right = 0.127998
+margin_bottom = -3.05176e-05
+mouse_filter = 2
+texture = ExtResource( 13 )
+expand = true
+
+[node name="Pot" type="TextureButton" parent="."]
+anchor_left = 0.014
+anchor_top = 0.607
+anchor_right = 0.073
+anchor_bottom = 0.673
+margin_left = -0.336
+margin_top = -0.200043
+margin_right = 0.247993
+margin_bottom = 0.199982
+texture_normal = ExtResource( 14 )
+expand = true
+
+[node name="PotBoilingHead" type="TextureRect" parent="."]
+anchor_left = 0.014
+anchor_top = 0.607
+anchor_right = 0.042
+anchor_bottom = 0.64
+margin_left = -0.336
+margin_top = -0.200043
+margin_right = -0.00800323
+margin_bottom = -3.05176e-05
+mouse_filter = 2
+texture = ExtResource( 9 )
+expand = true
+
+[node name="EndDayDialog" type="ConfirmationDialog" parent="."]
+margin_right = 200.0
+margin_bottom = 70.0
+window_title = "Confirm..."
+dialog_text = "End the Day?"
+
+[node name="SleepDialog" type="ConfirmationDialog" parent="."]
+margin_right = 200.0
+margin_bottom = 70.0
+window_title = "Confirm..."
+dialog_text = "Sleep?"
+
+[node name="Mug" type="TextureRect" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 15 )
+expand = true
+
+[node name="Timer" type="Timer" parent="Mug"]
+
+[node name="FadeCover" type="ColorRect" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Timer" type="Timer" parent="FadeCover"]
+
+[node name="SelfHelp" type="TextureRect" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 16 )
+expand = true
+
+[node name="Timer" type="Timer" parent="SelfHelp"]
+
+[connection signal="pressed" from="ClockButton" to="." method="_on_ClockButton_pressed"]
+[connection signal="pressed" from="WindowButton" to="." method="_on_WindowButton_pressed"]
+[connection signal="pressed" from="DoorOpen" to="." method="_on_DoorOpen_pressed"]
+[connection signal="pressed" from="Shrine_Static" to="." method="_on_Shrine_Static_pressed"]
+[connection signal="pressed" from="Kettle" to="." method="_on_Kettle_pressed"]
+[connection signal="pressed" from="Pot" to="." method="_on_Pot_pressed"]
+[connection signal="confirmed" from="EndDayDialog" to="." method="_on_EndDayDialog_confirmed"]
+[connection signal="confirmed" from="SleepDialog" to="." method="_on_SleepDialog_confirmed"]
+[connection signal="timeout" from="Mug/Timer" to="." method="_on_MugTimer_timeout"]
+[connection signal="timeout" from="FadeCover/Timer" to="." method="_on_Timer_timeout"]
